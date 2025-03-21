@@ -5,7 +5,7 @@ from typing import Dict, Any
 
 # Initialize Anthropic client with secure API key management
 client = anthropic.Anthropic(
-    api_key=os.getenv("ANTHROPIC_API_KEY")
+    api_key= os.environ.get("ANTHROPIC_API_KEY")
 )
 
 def validate_and_correct_html(html_code: str) -> str:
